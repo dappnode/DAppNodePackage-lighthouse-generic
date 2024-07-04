@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  beacon-chain:
+    build:
+      context: beacon-chain
+      args:
+        NETWORK: holesky 
+        P2P_PORT: 9604
+    ports:
+      - "9604:9604/tcp"
+      - "9604:9604/udp"
+    environment:
+      CORSDOMAIN: "http://lighthouse-holesky.dappnode"
+  validator:
+    build:
+      args:
+        NETWORK: holesky

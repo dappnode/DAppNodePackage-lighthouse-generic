@@ -1,0 +1,20 @@
+[
+    {
+        "labels": {
+            "package": "lighthouse-holesky.dnp.dappnode.eth",
+            "service": "beacon-chain.lighthouse-holesky.dappnode"
+        },
+        "targets": [
+            "beacon-chain.lighthouse-holesky.dappnode:8008"
+        ]
+    },
+    {
+        "labels": {
+            "package": "lighthouse-holesky.dnp.dappnode.eth",
+            "service": "validator.lighthouse-holesky.dappnode"
+        },
+        "targets": [
+            "validator.lighthouse-holesky.dappnode:8008"
+        ]
+    }
+]

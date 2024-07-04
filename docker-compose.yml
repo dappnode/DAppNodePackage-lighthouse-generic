@@ -1,0 +1,35 @@
+version: "3.5"
+services:
+  beacon-chain:
+    build:
+      context: beacon-chain
+      args:
+        UPSTREAM_VERSION: v5.2.1
+        STAKER_SCRIPTS_VERSION: v0.1.0
+        BEACON_API_PORT: 3500
+    volumes:
+      - "beacon-data:/root/.lighthouse"
+    restart: unless-stopped
+    # security_opt:
+    #   - "seccomp:unconfined"
+    environment:
+      LOG_LEVEL: info
+      CHECKPOINT_SYNC_URL: ""
+      EXTRA_OPTS: ""
+  validator:
+    build:
+      context: validator
+      args:
+        UPSTREAM_VERSION: v5.2.1
+        STAKER_SCRIPTS_VERSION: v0.1.0
+    restart: unless-stopped
+    # security_opt:
+    #   - "seccomp:unconfined"
+    environment:
+      LOG_LEVEL: info
+      GRAFFITI: validating_from_DAppNode
+      EXTRA_OPTS: ""
+      FEE_RECIPIENT: ""
+      ENABLE_DOPPELGANGER: "true"
+volumes:
+  beacon-data: {}

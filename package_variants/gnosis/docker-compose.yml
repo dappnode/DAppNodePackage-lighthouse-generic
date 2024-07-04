@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  beacon-chain:
+    build:
+      context: beacon-chain
+      args:
+        NETWORK: gnosis 
+        P2P_PORT: 19004
+    ports:
+      - "19004:19004/tcp"
+      - "19004:19004/udp"
+    environment:
+      CORSDOMAIN: "http://lighthouse.dappnode"
+  validator:
+    build:
+      args:
+        NETWORK: gnosis

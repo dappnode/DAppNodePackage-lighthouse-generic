@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  beacon-chain:
+    build:
+      context: beacon-chain
+      args:
+        NETWORK: mainnet 
+        P2P_PORT: 9104
+    ports:
+      - "9104:9104/tcp"
+      - "9104:9104/udp"
+    environment:
+      CORSDOMAIN: "http://lighthouse.dappnode"
+  validator:
+    build:
+      args:
+        NETWORK: mainnet

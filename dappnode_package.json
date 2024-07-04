@@ -1,0 +1,40 @@
+{
+  "upstream": [
+    {
+      "repo": "ChainSafe/lodestar",
+      "version": "v1.19.0",
+      "arg": "UPSTREAM_VERSION"
+    },
+    {
+      "repo": "dappnode/staker-package-scripts",
+      "version": "v0.1.0",
+      "arg": "STAKER_SCRIPTS_VERSION"
+    }
+  ],
+  "architectures": ["linux/amd64", "linux/arm64"],
+  "shortDescription": "Lighthouse ETH2.0 Beacon chain + validator",
+  "description": "Lighthouse is an Ethereum 2.0 client that connects to other Ethereum 2.0 clients to form a resilient and decentralized proof-of-stake blockchain.",
+  "type": "service",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "pablo <pablo@dappnode.io> (https://github.com/pablomendezroyo)",
+    "mgarciate <mgarciate@gmail.com> (https://github.com/mgarciate)"
+  ],
+  "categories": ["Blockchain", "ETH2.0"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic/issues"
+  },
+  "license": "Apache-2.0",
+  "chain": {
+    "driver": "ethereum-beacon-chain",
+    "serviceName": "beacon-chain",
+    "portNumber": 3500
+  },
+  "warnings": {
+    "onRemove": "Make sure your StakersUI does not have this client selected! Double check in the Stakers Tab in the left NavBar"
+  }
+}

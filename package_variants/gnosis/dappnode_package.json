@@ -1,0 +1,20 @@
+{
+  "name": "lighthouse-gnosis.dnp.dappnode.eth",
+  "version": "1.0.11",
+  "links": {
+    "ui": "http://brain.web3signer-gnosis.dappnode",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic#readme",
+    "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
+    "docs": "https://lighthouse-book.sigmaprime.io/"
+  },
+  "globalEnvs": [
+    {
+      "envs": ["EXECUTION_CLIENT_GNOSIS", "MEVBOOST_GNOSIS"],
+      "services": ["beacon-chain"]
+    },
+    {
+      "envs": ["MEVBOOST_GNOSIS"],
+      "services": ["validator"]
+    }
+  ]
+}
