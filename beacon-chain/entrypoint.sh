@@ -26,7 +26,7 @@ run_beacon() {
         --metrics-port 8008 \
         --metrics-allow-origin "*" \
         --execution-endpoint "${ENGINE_API_URL}" \
-        --execution-jwt "${JWT_SECRET_FILE}" \
+        --execution-jwt "${JWT_FILE_PATH}" \
         ${EXTRA_OPTS}
 }
 
