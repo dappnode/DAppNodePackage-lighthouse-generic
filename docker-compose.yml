@@ -8,11 +8,12 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.0
         BEACON_API_PORT: 3500
         DATA_DIR: /root/.lighthouse
+        FEE_RECIPIENT: ""
     volumes:
       - "beacon-data:/root/.lighthouse"
     restart: unless-stopped
-    # security_opt:
-    #   - "seccomp:unconfined"
+    security_opt:
+      - "seccomp:unconfined"
     environment:
       LOG_LEVEL: info
       CHECKPOINT_SYNC_URL: ""
@@ -25,8 +26,8 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.0
         DATA_DIR: /root/.lighthouse
     restart: unless-stopped
-    # security_opt:
-    #   - "seccomp:unconfined"
+    security_opt:
+      - "seccomp:unconfined"
     environment:
       LOG_LEVEL: info
       GRAFFITI: validating_from_DAppNode
