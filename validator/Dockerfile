@@ -3,13 +3,14 @@ FROM sigp/lighthouse:${UPSTREAM_VERSION}-modern
 
 ARG NETWORK
 ARG STAKER_SCRIPTS_VERSION
+ARG DATA_DIR
 
 COPY security/api-token.txt /root/.lighthouse/validators/
 COPY security/.secp-sk /root/.lighthouse/validators/
 COPY entrypoint.sh /usr/local/bin
 
 ENV VALIDATOR_PORT=3500 \
-    DATA_DIR=/root/.lighthouse \
+    DATA_DIR=${DATA_DIR} \
     NETWORK=${NETWORK} \
     STAKER_SCRIPTS_URL=https://github.com/dappnode/staker-package-scripts/releases/download/${STAKER_SCRIPTS_VERSION}
 

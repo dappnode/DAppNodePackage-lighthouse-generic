@@ -7,6 +7,7 @@ services:
         UPSTREAM_VERSION: v5.2.1
         STAKER_SCRIPTS_VERSION: v0.1.0
         BEACON_API_PORT: 3500
+        DATA_DIR: /root/.lighthouse
     volumes:
       - "beacon-data:/root/.lighthouse"
     restart: unless-stopped
@@ -22,6 +23,7 @@ services:
       args:
         UPSTREAM_VERSION: v5.2.1
         STAKER_SCRIPTS_VERSION: v0.1.0
+        DATA_DIR: /root/.lighthouse
     restart: unless-stopped
     # security_opt:
     #   - "seccomp:unconfined"
