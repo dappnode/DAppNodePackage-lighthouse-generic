@@ -1,19 +1,21 @@
 #!/bin/sh
 
-SUPPORTED_NETWORKS="gnosis holesky mainnet"
 CHECKPOINT_SYNC_FLAG="--checkpoint-sync-url"
 MEVBOOST_FLAG_KEYS="--builder"
 
 # shellcheck disable=SC1091 # Path is relative to the Dockerfile
 . /etc/profile
 
-ENGINE_URL=$(get_engine_api_url "${NETWORK}" "${SUPPORTED_NETWORKS}")
+ENGINE_URL="http://execution.${NETWORK}.staker.dappnode:8551"
 VALID_FEE_RECIPIENT=$(get_valid_fee_recipient "${FEE_RECIPIENT}")
 CHECKPOINT_SYNC_FLAG=$(get_checkpoint_sync_flag "${CHECKPOINT_SYNC_FLAG}" "${CHECKPOINT_SYNC_URL}")
 MEVBOOST_FLAG=$(get_mevboost_flag "${NETWORK}" "${MEVBOOST_FLAG_KEYS}")
 
 EXTRA_OPTS=$(add_flag_to_extra_opts_safely "${EXTRA_OPTS}" "--checkpoint-sync-url-timeout=300")
 EXTRA_OPTS=$(add_flag_to_extra_opts_safely "${EXTRA_OPTS}" "--suggested-fee-recipient=${VALID_FEE_RECIPIENT}")
+
+JWT_SECRET=$(get_jwt_secret_by_network "${NETWORK}")
+echo "${JWT_SECRET}" >"${JWT_FILE_PATH}"
 
 echo "[INFO - entrypoint] Starting beacon node..."
 

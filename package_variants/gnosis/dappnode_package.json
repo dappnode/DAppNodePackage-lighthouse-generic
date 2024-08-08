@@ -9,12 +9,8 @@
   },
   "globalEnvs": [
     {
-      "envs": ["EXECUTION_CLIENT_GNOSIS", "MEVBOOST_GNOSIS"],
-      "services": ["beacon-chain"]
-    },
-    {
       "envs": ["MEVBOOST_GNOSIS"],
-      "services": ["validator"]
+      "services": ["validator", "beacon-chain"]
     }
   ]
 }
