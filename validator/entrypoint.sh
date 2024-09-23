@@ -20,24 +20,25 @@ else
     echo "[WARN - entrypoint] Doppelganger protection is disabled"
 fi
 
-echo "[INFO - entrypoint] Starting validator service"
-
-# shellcheck disable=SC2086
-exec lighthouse \
-    --debug-level="${LOG_LEVEL}" \
-    --network="${NETWORK}" \
+FLAGS="--debug-level=$LOG_LEVEL \
+    --network=$NETWORK \
     validator \
     --init-slashing-protection \
-    --datadir "${DATA_DIR}" \
-    --beacon-nodes "${BEACON_API_URL}" \
-    --graffiti="${VALID_GRAFFITI}" \
+    --datadir=$DATA_DIR \
+    --beacon-nodes=$BEACON_API_URL \
+    --graffiti=$VALID_GRAFFITI \
     --http \
     --http-address 0.0.0.0 \
-    --http-port "${VALIDATOR_PORT}" \
-    --http-allow-origin "*" \
+    --http-port=$VALIDATOR_PORT \
+    --http-allow-origin=* \
     --unencrypted-http-transport \
     --metrics \
-    --metrics-address 0.0.0.0 \
-    --metrics-port 8008 \
-    --metrics-allow-origin "*" \
-    --suggested-fee-recipient="${VALID_FEE_RECIPIENT}" ${MEVBOOST_FLAG} ${EXTRA_OPTS}
+    --metrics-address=0.0.0.0 \
+    --metrics-port=8008 \
+    --metrics-allow-origin=* \
+    --suggested-fee-recipient=$VALID_FEE_RECIPIENT ${MEVBOOST_FLAG} ${EXTRA_OPTS}"
+
+echo "[INFO - entrypoint] Starting lighthouse validator with flags: $FLAGS"
+
+# shellcheck disable=SC2086
+exec lighthouse $FLAGS
