@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CHECKPOINT_SYNC_FLAG="--checkpoint-sync-url"
+CHECKPOINT_SYNC_KEY="--checkpoint-sync-url"
 MEVBOOST_FLAG_KEYS="--builder"
 
 # shellcheck disable=SC1091 # Path is relative to the Dockerfile
@@ -8,7 +8,7 @@ MEVBOOST_FLAG_KEYS="--builder"
 
 ENGINE_URL="http://execution.${NETWORK}.staker.dappnode:8551"
 VALID_FEE_RECIPIENT=$(get_valid_fee_recipient "${FEE_RECIPIENT}")
-CHECKPOINT_SYNC_FLAG=$(get_checkpoint_sync_flag "${CHECKPOINT_SYNC_FLAG}" "${CHECKPOINT_SYNC_URL}")
+CHECKPOINT_SYNC_FLAG=$(get_checkpoint_sync_flag "${CHECKPOINT_SYNC_KEY}" "${CHECKPOINT_SYNC_URL}")
 MEVBOOST_FLAG=$(get_mevboost_flag "${NETWORK}" "${MEVBOOST_FLAG_KEYS}")
 
 EXTRA_OPTS=$(add_flag_to_extra_opts_safely "${EXTRA_OPTS}" "--checkpoint-sync-url-timeout=300")
