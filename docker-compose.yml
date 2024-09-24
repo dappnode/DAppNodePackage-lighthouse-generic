@@ -8,7 +8,6 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.0
         BEACON_API_PORT: 3500
         DATA_DIR: /root/.lighthouse
-        FEE_RECIPIENT: ""
     volumes:
       - "beacon-data:/root/.lighthouse"
     restart: unless-stopped
@@ -18,6 +17,7 @@ services:
       LOG_LEVEL: info
       CHECKPOINT_SYNC_URL: ""
       EXTRA_OPTS: ""
+      FEE_RECIPIENT: ""
   validator:
     build:
       context: validator
