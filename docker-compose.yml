@@ -5,14 +5,14 @@ services:
       context: beacon-chain
       args:
         UPSTREAM_VERSION: v5.3.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         BEACON_API_PORT: 3500
         DATA_DIR: /root/.lighthouse
     volumes:
-      - "beacon-data:/root/.lighthouse"
+      - beacon-data:/root/.lighthouse
     restart: unless-stopped
     security_opt:
-      - "seccomp:unconfined"
+      - seccomp:unconfined
     environment:
       LOG_LEVEL: info
       CHECKPOINT_SYNC_URL: ""
@@ -23,11 +23,11 @@ services:
       context: validator
       args:
         UPSTREAM_VERSION: v5.3.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         DATA_DIR: /root/.lighthouse
     restart: unless-stopped
     security_opt:
-      - "seccomp:unconfined"
+      - seccomp:unconfined
     environment:
       LOG_LEVEL: info
       GRAFFITI: validating_from_DAppNode
