@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SUPPORTED_NETWORKS="gnosis holesky mainnet"
-MEVBOOST_FLAG="--builder-proposals"
+MEVBOOST_FLAG_KEY="--builder-proposals"
 SKIP_MEVBOOST_URL="true"
 CLIENT="lighthouse"
 
