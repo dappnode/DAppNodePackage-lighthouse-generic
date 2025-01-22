@@ -1,6 +1,6 @@
 {
   "name": "lighthouse.dnp.dappnode.eth",
-  "version": "1.0.12",
+  "version": "1.0.16",
   "links": {
     "ui": "http://brain.web3signer.dappnode",
     "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic#readme",
