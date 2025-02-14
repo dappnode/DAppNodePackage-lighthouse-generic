@@ -1,11 +1,4 @@
 {
-  "upstream": [
-    {
-      "repo": "sigp/lighthouse",
-      "version": "v7.0.0-beta.0",
-      "arg": "UPSTREAM_VERSION"
-    }
-  ],
   "name": "lighthouse-holesky.dnp.dappnode.eth",
   "version": "0.1.6",
   "links": {
