@@ -1,0 +1,20 @@
+[
+    {
+        "labels": {
+            "package": "lighthouse-hoodi.dnp.dappnode.eth",
+            "service": "beacon-chain.lighthouse-hoodi.dappnode"
+        },
+        "targets": [
+            "beacon-chain.lighthouse-hoodi.dappnode:8008"
+        ]
+    },
+    {
+        "labels": {
+            "package": "lighthouse-hoodi.dnp.dappnode.eth",
+            "service": "validator.lighthouse-hoodi.dappnode"
+        },
+        "targets": [
+            "validator.lighthouse-hoodi.dappnode:8008"
+        ]
+    }
+]

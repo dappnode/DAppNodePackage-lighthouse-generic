@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+  beacon-chain:
+    build:
+      context: beacon-chain
+      args:
+        UPSTREAM_VERSION: v7.0.0-beta.2 ## To be removed once Pectra is live. v7.0.0-beta.2 is a hoodi-only release
+        NETWORK: hoodi
+        P2P_PORT: 9704
+    ports:
+      - "9704:9704/tcp"
+      - "9704:9704/udp"
+    environment:
+      CORSDOMAIN: "http://lighthouse-hoodi.dappnode"
+  validator:
+    build:
+      args:
+        NETWORK: hoodi
+        UPSTREAM_VERSION: v7.0.0-beta.2 ## To be removed once Pectra is live. v7.0.0-beta.2 is a hoodi-only release
