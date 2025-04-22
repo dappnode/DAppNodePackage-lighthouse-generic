@@ -4,7 +4,6 @@ services:
     build:
       context: beacon-chain
       args:
-        UPSTREAM_VERSION: v7.0.0-beta.5 ## To be removed once Pectra is live. v7.0.0-beta.5 is a hoodi-only release
         NETWORK: hoodi
         P2P_PORT: 9704
     ports:
@@ -16,4 +15,3 @@ services:
     build:
       args:
         NETWORK: hoodi
-        UPSTREAM_VERSION: v7.0.0-beta.5 ## To be removed once Pectra is live. v7.0.0-beta.5 is a hoodi-only release
