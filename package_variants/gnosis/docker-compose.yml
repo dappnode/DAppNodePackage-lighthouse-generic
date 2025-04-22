@@ -10,7 +10,7 @@ services:
       - "19004:19004/tcp"
       - "19004:19004/udp"
     environment:
-      CORSDOMAIN: "http://lighthouse.dappnode"
+      CORSDOMAIN: "http://lighthouse-gnosis.dappnode"
   validator:
     build:
       args:

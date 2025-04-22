@@ -1,11 +1,4 @@
 {
-  "upstream": [
-    {
-      "repo": "sigp/lighthouse",
-      "version": "v7.0.0",
-      "arg": "UPSTREAM_VERSION"
-    }
-  ],
   "name": "lighthouse-hoodi.dnp.dappnode.eth",
   "version": "0.1.0",
   "links": {
