@@ -34,5 +34,6 @@ services:
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
       ENABLE_DOPPELGANGER: "true"
+      BACKUP_BEACON_NODES: ""
 volumes:
   beacon-data: {}

@@ -25,7 +25,7 @@ FLAGS="--debug-level=$LOG_LEVEL \
     validator \
     --init-slashing-protection \
     --datadir=$DATA_DIR \
-    --beacon-nodes=$BEACON_API_URL \
+    --beacon-nodes=$BEACON_API_URL$( [ -n "${BACKUP_BEACON_NODES}" ] && echo ",${BACKUP_BEACON_NODES}" ) \
     --graffiti=$VALID_GRAFFITI \
     --http \
     --http-address 0.0.0.0 \
