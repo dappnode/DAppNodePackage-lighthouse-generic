@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  beacon-chain:
+    build:
+      context: beacon-chain
+      args:
+        NETWORK: sepolia
+        P2P_PORT: 9804
+    ports:
+      - "9804:9804/tcp"
+      - "9804:9804/udp"
+    environment:
+      CORSDOMAIN: "http://lighthouse-sepolia.dappnode"
+  validator:
+    build:
+      args:
+        NETWORK: sepolia

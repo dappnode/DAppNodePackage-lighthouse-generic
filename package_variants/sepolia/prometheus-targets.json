@@ -1,0 +1,20 @@
+[
+    {
+        "labels": {
+            "package": "lighthouse-sepolia.dnp.dappnode.eth",
+            "service": "beacon-chain.lighthouse-sepolia.dappnode"
+        },
+        "targets": [
+            "beacon-chain.lighthouse-sepolia.dappnode:8008"
+        ]
+    },
+    {
+        "labels": {
+            "package": "lighthouse-sepolia.dnp.dappnode.eth",
+            "service": "validator.lighthouse-sepolia.dappnode"
+        },
+        "targets": [
+            "validator.lighthouse-sepolia.dappnode:8008"
+        ]
+    }
+]
