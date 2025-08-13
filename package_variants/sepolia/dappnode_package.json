@@ -1,0 +1,10 @@
+{
+  "name": "lighthouse-sepolia.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "links": {
+    "ui": "http://brain.web3signer-sepolia.dappnode",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic#readme",
+    "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
+    "docs": "https://lighthouse-book.sigmaprime.io/"
+  }
+}

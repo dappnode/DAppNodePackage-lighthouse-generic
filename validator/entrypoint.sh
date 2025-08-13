@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SUPPORTED_NETWORKS="gnosis hoodi mainnet"
+SUPPORTED_NETWORKS="gnosis hoodi mainnet sepolia"
 MEVBOOST_FLAG_KEY="--builder-proposals"
 SKIP_MEVBOOST_URL="true"
 CLIENT="lighthouse"
