@@ -9,9 +9,6 @@
   },
   "globalEnvs": [
     {
-      "envs": [
-        "MEVBOOST_SEPOLIA"
-      ],
       "services": [
         "validator",
         "beacon-chain"
