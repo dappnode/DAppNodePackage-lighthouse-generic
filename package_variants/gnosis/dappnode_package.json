@@ -13,5 +13,10 @@
       "envs": ["MEVBOOST_GNOSIS"],
       "services": ["validator", "beacon-chain"]
     }
-  ]
+  ],
+  "optionalDependencies": {
+    "gnosis-erigon.dnp.dappnode.eth": ">=1.0.2",
+    "nethermind-xdai.dnp.dappnode.eth": ">=1.0.69",
+    "web3signer-gnosis.dnp.dappnode.eth": ">=1.0.14"
+  }
 }
