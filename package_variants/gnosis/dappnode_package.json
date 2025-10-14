@@ -8,12 +8,6 @@
     "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
     "docs": "https://lighthouse-book.sigmaprime.io/"
   },
-  "globalEnvs": [
-    {
-      "envs": ["MEVBOOST_GNOSIS"],
-      "services": ["validator", "beacon-chain"]
-    }
-  ],
   "optionalDependencies": {
     "gnosis-erigon.dnp.dappnode.eth": ">=1.0.2",
     "nethermind-xdai.dnp.dappnode.eth": ">=1.0.69",
