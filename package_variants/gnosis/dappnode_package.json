@@ -2,7 +2,7 @@
   "name": "lighthouse-gnosis.dnp.dappnode.eth",
   "version": "0.1.13",
   "requirements": {
-    "minimumDappnodeVersion": "0.3.11"
+    "minimumDappnodeVersion": "0.3.12"
   },
   "links": {
     "ui": "http://brain.web3signer-gnosis.dappnode",
