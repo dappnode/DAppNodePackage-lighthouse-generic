@@ -11,6 +11,9 @@ on:
         type: choice
         options: [geth, nethermind, besu, erigon]
 
+permissions:
+  contents: read
+
 jobs:
   sync:
     runs-on: staking-test-hoodi
