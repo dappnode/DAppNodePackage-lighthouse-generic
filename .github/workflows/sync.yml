@@ -21,7 +21,7 @@ jobs:
             -v /var/run/docker.sock:/var/run/docker.sock \
             -e MODE=sync \
             -e CONSENSUS_CLIENT='lighthouse' \
-            -e EXECUTION_CLIENT=${{ github.event.inputs.execution_client }} \
+            -e EXECUTION_CLIENT=${{ github.event.inputs.execution_client || 'geth' }} \
             -e NETWORK=hoodi \
             ghcr.io/dappnode/staker-test-util/test-runner:latest
   notify:
