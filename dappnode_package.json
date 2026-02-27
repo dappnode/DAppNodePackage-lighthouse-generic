@@ -2,7 +2,7 @@
   "upstream": [
     {
       "repo": "sigp/lighthouse",
-      "version": "v8.1.0",
+      "version": "v8.1.1",
       "arg": "UPSTREAM_VERSION"
     },
     {
