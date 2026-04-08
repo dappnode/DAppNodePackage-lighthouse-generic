@@ -7,10 +7,11 @@ services:
         NETWORK: mainnet 
         P2P_PORT: 9104
     ports:
-      - "9104:9104/tcp"
+      - "9104:9104"
       - "9104:9104/udp"
     environment:
       CORSDOMAIN: "http://lighthouse.dappnode"
+      CHECKPOINT_SYNC_URL: "https://checkpoint-sync.dappnode.net"
   validator:
     build:
       args:
