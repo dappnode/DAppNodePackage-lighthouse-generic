@@ -16,7 +16,8 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 ADD ${STAKER_SCRIPTS_URL}/consensus_tools.sh /etc/profile.d/
 
-RUN apt-get update && apt-get --yes install curl && apt-get clean && \
+RUN rm -rf /var/lib/apt/lists/* && \
+    apt-get update && apt-get --yes install curl && apt-get clean && \
     chmod +rx /usr/local/bin/entrypoint.sh /etc/profile.d/consensus_tools.sh
 
 # This env changes the variant
