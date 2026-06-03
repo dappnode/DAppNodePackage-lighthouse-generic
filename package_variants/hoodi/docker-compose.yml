@@ -7,10 +7,11 @@ services:
         NETWORK: hoodi
         P2P_PORT: 9704
     ports:
-      - "9704:9704/tcp"
+      - "9704:9704"
       - "9704:9704/udp"
     environment:
       CORSDOMAIN: "http://lighthouse-hoodi.dappnode"
+      CHECKPOINT_SYNC_URL: "https://checkpoint-sync-hoodi.dappnode.net"
   validator:
     build:
       args:

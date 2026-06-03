@@ -7,10 +7,11 @@ services:
         NETWORK: sepolia
         P2P_PORT: 9804
     ports:
-      - "9804:9804/tcp"
+      - "9804:9804"
       - "9804:9804/udp"
     environment:
       CORSDOMAIN: "http://lighthouse-sepolia.dappnode"
+      CHECKPOINT_SYNC_URL: "https://checkpoint-sync-sepolia.dappnode.net"
   validator:
     build:
       args:

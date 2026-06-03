@@ -1,16 +1,18 @@
 {
   "name": "lighthouse-gnosis.dnp.dappnode.eth",
   "version": "0.1.13",
+  "requirements": {
+    "minimumDappnodeVersion": "0.3.12"
+  },
   "links": {
     "ui": "http://brain.web3signer-gnosis.dappnode",
     "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic#readme",
     "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
     "docs": "https://lighthouse-book.sigmaprime.io/"
   },
-  "globalEnvs": [
-    {
-      "envs": ["MEVBOOST_GNOSIS"],
-      "services": ["validator", "beacon-chain"]
-    }
-  ]
+  "optionalDependencies": {
+    "gnosis-erigon.dnp.dappnode.eth": ">=1.0.2",
+    "nethermind-xdai.dnp.dappnode.eth": ">=1.0.69",
+    "web3signer-gnosis.dnp.dappnode.eth": ">=1.0.14"
+  }
 }
