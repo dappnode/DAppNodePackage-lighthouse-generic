@@ -26,7 +26,6 @@ FLAGS="--debug-level=$LOG_LEVEL \
     --init-slashing-protection \
     --datadir=$DATA_DIR \
     --beacon-nodes=$BEACON_API_URL$( [ -n "${BACKUP_BEACON_NODES}" ] && echo ",${BACKUP_BEACON_NODES}" ) \
-    --graffiti=$VALID_GRAFFITI \
     --http \
     --http-address 0.0.0.0 \
     --http-port=$VALIDATOR_PORT \
@@ -38,7 +37,8 @@ FLAGS="--debug-level=$LOG_LEVEL \
     --metrics-allow-origin=* \
     --suggested-fee-recipient=$VALID_FEE_RECIPIENT ${MEVBOOST_FLAG} ${EXTRA_OPTS}"
 
-echo "[INFO - entrypoint] Starting lighthouse validator with flags: $FLAGS"
+echo "[INFO - entrypoint] Starting lighthouse validator with flags: $FLAGS --graffiti=$VALID_GRAFFITI"
 
 # shellcheck disable=SC2086
-exec lighthouse $FLAGS
+# --graffiti flag is passed separately to allow spaces in graffiti
+exec lighthouse $FLAGS --graffiti "$VALID_GRAFFITI"
