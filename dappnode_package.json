@@ -35,7 +35,7 @@
     {
       "arg": "UPSTREAM_VERSION",
       "repo": "sigp/lighthouse",
-      "version": "v8.2.0"
+      "version": "v8.2.1"
     },
     {
       "arg": "STAKER_SCRIPTS_VERSION",
