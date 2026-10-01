@@ -1,12 +1,4 @@
 {
-  "name": "lighthouse-hoodi.dnp.dappnode.eth",
-  "version": "0.1.0",
-  "links": {
-    "ui": "http://brain.web3signer-hoodi.dappnode",
-    "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic#readme",
-    "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
-    "docs": "https://lighthouse-book.sigmaprime.io/"
-  },
   "globalEnvs": [
     {
       "envs": [
@@ -17,5 +9,13 @@
         "beacon-chain"
       ]
     }
-  ]
+  ],
+  "links": {
+    "docs": "https://lighthouse-book.sigmaprime.io/",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-generic#readme",
+    "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
+    "ui": "http://brain.web3signer-hoodi.dappnode"
+  },
+  "name": "lighthouse-hoodi.dnp.dappnode.eth",
+  "version": "0.1.10"
 }
